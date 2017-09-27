@@ -23,9 +23,8 @@
 
 namespace App\Http\Controllers;
 
-use App\ROL;
+use Alert;
 use App\PERSONA;
-use App\REGISTRO;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -43,6 +42,7 @@ class PersonaController extends Controller
      */
     public function index()
     {
+        
         return view('admin.registro.registro');
     }
 
@@ -65,11 +65,22 @@ class PersonaController extends Controller
 
     public function store(Request $request)
     {
-        $user = new PERSONA($request->all());
+        $user = PERSONA::where('cedula', $request->cedula)->first();
 
-        $user->asistencia= 1;
+        if (!$user) 
+        {
+            $user = new PERSONA($request->all());
 
-        $user->save();
+            $user->asistencia= 1;
+
+            $user->save();
+
+            alert()->success('La persona se ha registrado exitosamente','Registrado!')->autoclose(3000);
+        }
+        else
+        {
+            alert()->error('Imposible registrar, la persona ya se encuentra registrada','Error!')->autoclose(3000);
+        }
 
         return view('admin.registro.registro');
         

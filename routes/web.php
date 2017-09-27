@@ -45,6 +45,8 @@ Route::prefix('admin') -> group(function()
 	 * Ruta asistencia
 	 */
 
+	Route::resource('asistencia','AsistenciaController');
+
 	Route::get('asistencia', 'AsistenciaController@index')->name('tomar_asistencia');
 
 	/**

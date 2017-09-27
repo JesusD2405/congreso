@@ -124,44 +124,24 @@
 
                 <div class="row">
                   <div class="input-field col s3">
-                    <select name="estado" required>
-                      <option disabled selected>Estado</option>
-                      <option name="estado[1]" value="1">Option 1</option>
-                      <option name="estado[2]" value="2">Option 2</option>
-                      <option name="estado[3]" value="3">Option 3</option>
-                    </select>
-                    <label>Estado</label>
+                    <input name="estado" type="text" class="validate" required>
+                    <label for="estado">Estado</label>
                   </div>
                   
                   <div class="input-field col s3">
-                    <select name="municipio" required>
-                      <option disabled selected>Municipio</option>
-                      <option name="municipio[]" value="1">Option 1</option>
-                      <option name="municipio[]" value="2">Option 2</option>
-                      <option name="municipio[]" value="3">Option 3</option>
-                    </select>
-                    <label>Municipio</label>
+                    <input name="municipio" type="text" class="validate" required>
+                    <label for="municipio">Municipio</label>
                   </div>
                 
 
                   <div class="input-field col s3">
-                    <select name="parroquia" required>
-                      <option value="" disabled selected>Parroquia</option>
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </select>
-                    <label>Parroquia</label>
+                    <input name="parroquia" type="text" class="validate" required>
+                    <label for="parroquia">Parroquia</label>
                   </div>
 
                   <div class="input-field col s3">
-                    <select name="ciudad" required>
-                      <option value="" disabled selected>Ciudad</option>
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </select>
-                    <label>Ciudad</label>
+                    <input name="ciudad" type="text" class="validate" required>
+                    <label for="ciudad">Ciudad</label>
                   </div>
 
                 </div>
@@ -175,8 +155,8 @@
 
                 <div class="row">
                   <div class="input-field col s12 center-align">
-                    <button class="btn waves-effect waves-light" type="submit">Enviar
-                      <i class="material-icons right">send</i>
+                    <button class="btn waves-effect waves-light" type="submit">Guardar 
+                      <i class="material-icons right">save</i>
                     </button>
                   </div>
                 </div>

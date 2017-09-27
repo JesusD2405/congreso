@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Alert;
+use App\PERSONA;
 use Illuminate\Http\Request;
 
 class AsistenciaController extends Controller
@@ -13,7 +15,7 @@ class AsistenciaController extends Controller
      */
     public function index()
     {
-        return view('admin.');
+        return view('admin.asistencia.asistencia');
     }
 
     /**
@@ -34,7 +36,22 @@ class AsistenciaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = PERSONA::where('cedula', $request->cedula)->first();
+
+        if ($user) 
+        {
+            $user->asistencia += 1;
+
+            $user->update();
+
+            alert()->success('Se ha registrado su asistencia exitosamente','Verificado!')->autoclose(3000);
+        }
+        else
+        {
+            alert()->error('Imposible registrar asistencia, la persona no se encuentra registrada','Error!')->autoclose(4000);
+        }
+
+        return view('admin.asistencia.asistencia');
     }
 
     /**

@@ -58,6 +58,12 @@ class HomeController extends Controller
         // Contamos el total de asistentes registrados en la BD
         $asistentes = PERSONA::where('tipo_participacion', 'Asistente')->count();
 
+        // Contamos el total de asistentes registrados el dia 1
+        $asistencia_dia1= PERSONA::whereDate('created_at', '2017-09-26')->count();
+
+        // Contamos el total de asistentes registrados el dia 1
+        $asistencia_dia2= PERSONA::whereDate('created_at', '2017-09-27')->count();
+
         // Contamos el total de usuarios registrados en la BD
         $usuarios = PERSONA::all()->count();
 
@@ -65,6 +71,8 @@ class HomeController extends Controller
         return view('admin.home', [ 'total_ponentes'   => $ponentes,
                                     'total_mineros'    => $mineros,
                                     'total_asistentes' => $asistentes,
-                                    'total_usuarios'   => $usuarios    ]);
+                                    'total_usuarios'   => $usuarios,
+                                    'total_dia1'       => $asistencia_dia1,
+                                    'total_dia2'       => $asistencia_dia2 ]);
     }
 }

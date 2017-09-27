@@ -15,6 +15,34 @@
       <div class="col s12 m8">
 
         <div class="col s12 m6">
+
+          <div class="card blue-grey blue-grey darken-3">
+            <div class="card-content white-text">
+                <span class="card-title">
+                  <i class="medium material-icons left">show_chart</i>
+                  <h3>{{ $total_dia1 }}</h3>
+                </span>
+                <p>Total Asistencia - Dia 1</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col s12 m6">
+
+          <div class="card blue-grey blue-grey darken-3">
+            <div class="card-content white-text">
+                <span class="card-title">
+                  <i class="medium material-icons left">trending_up</i>
+                  <h3>{{ $total_dia2 }}</h3>
+                </span>
+                <p>Total Asistencia - Dia 2</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col s12 m6">
           
           <div class="card blue-grey darken-3">
 

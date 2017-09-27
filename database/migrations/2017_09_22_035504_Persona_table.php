@@ -58,6 +58,10 @@ class PersonaTable extends Migration
             $table->string('titulo_ponencia')->nullable();
             $table->string('direccion');
             $table->integer('asistencia')->nullable();
+            $table->string('estado');
+            $table->string('municipio');
+            $table->string('parroquia');
+            $table->string('ciudad');
 
             $table->timestamps();
         });

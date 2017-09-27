@@ -38,7 +38,7 @@ class PERSONA extends Model
      *
      * @var array
      */
-    protected $fillable = [ 'nombre', 'apellido', 'cedula', 'edad', 'correo', 'telefono', 'sexo', 'grado_instruccion', 'sector_trabajo', 'institucion', 'profesion', 'tipo_participacion', 'titulo_ponencia', 'direccion', 'asistencia',];
+    protected $fillable = [ 'nombre', 'apellido', 'cedula', 'edad', 'correo', 'telefono', 'sexo', 'grado_instruccion', 'sector_trabajo', 'institucion', 'profesion', 'tipo_participacion', 'titulo_ponencia', 'direccion', 'asistencia', 'estado', 'municipio', 'parroquia', 'ciudad',];
 
     
 }

@@ -35,6 +35,7 @@
       <!--Import materialize.css-->
       <link rel="stylesheet" href="{{ asset('frameworks/materialize/css/materialize.min.css') }}"  media="screen,projection"/>
       <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+      <link rel="stylesheet" href="{{ asset('plugins/sweetalert/dist/sweetalert.css') }}">
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -55,7 +56,7 @@
                 <a href="{{ url('admin/home') }}" class="brand-logo center">Evento de Mineria</a>
                 <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                  <li><a href="#" class="dropdown-button" data-activates="dropdown1"><i class="material-icons left">account_circle</i>John Doe</a></li>
+                  <li><a href="#" class="dropdown-button" data-activates="dropdown1"><i class="material-icons left">account_circle</i>Cuenta</a></li>
                     <ul id='dropdown1' class='dropdown-content'>
                       <li>
                   
@@ -74,8 +75,8 @@
                 <ul class="left hide-on-med-and-down">
                   <li><a href="{{ url('admin/home') }}"><i class="material-icons left">home</i>Inicio</a></li>
                   <li><a href="{{ url('admin/registro') }}"><i class="material-icons left">group_add</i>Registro</a></li>
-                  <li><a href="{{ url('admin/listar') }}"><i class="material-icons left">group</i>Listar</a></li>
-                  <li><a href="{{ url('admin/asistencia') }}"><i class="material-icons left">group</i>Asistencia</a></li>
+                  <li><a href="{{ url('admin/listar') }}"><i class="material-icons left">assignment</i>Listar</a></li>
+                  <li><a href="{{ url('admin/asistencia') }}"><i class="material-icons left">event_available</i>Asistencia</a></li>
                 </ul>
               </div>
             </nav>
@@ -137,11 +138,16 @@
 
     </footer>
 
-        
+
+    
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
       <script type="text/javascript" src="{{ asset('js/scriptIndex.js') }}"></script>
       <script type="text/javascript" src="{{ asset('frameworks/materialize/js/materialize.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('plugins/sweetalert/dist/sweetalert.min.js') }}"></script>
+
+      <!-- Include this after the sweet alert js file -->
+      @include('sweet::alert')
 
   </body>
   
